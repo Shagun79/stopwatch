@@ -2,6 +2,9 @@ let hour = 0;
 let min = 0;
 let sec = 0;
 let timer = null;
+let second;
+let minute;
+let hours;
 function start() {
   if (timer !== null) {
     clearInterval(timer);
@@ -17,14 +20,12 @@ function reset() {
   sec = 0;
   min = 0;
   hour = 0;
-  document.getElementById("sec").innerHTML = sec;
-  document.getElementById("min").innerHTML = min;
-  document.getElementById("hour").innerHTML = hour;
+  document.getElementById("sec").innerHTML = "0" +sec;
+  document.getElementById("min").innerHTML = "0"+ min;
+  document.getElementById("hour").innerHTML =  "0" + hour;
 }
 
-let second;
-let minute;
-let hours;
+
 function stopwatch() {
   sec++;
   if (sec == 60) {
